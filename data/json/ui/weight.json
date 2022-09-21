@@ -29,6 +29,17 @@
         "condition": {
           "and": [
             { "compare_int": [ { "u_val": "bmi_permil" }, ">", { "const": 16000 } ] },
+            { "compare_int": [ { "u_val": "bmi_permil" }, "<=", { "const": 17875 } ] }
+          ]
+        }
+      },
+      {
+        "id": "slightly_underweight",
+        "text": "Slightly Underweight",
+        "color": "yellow",
+        "condition": {
+          "and": [
+            { "compare_int": [ { "u_val": "bmi_permil" }, ">", { "const": 17875 } ] },
             { "compare_int": [ { "u_val": "bmi_permil" }, "<=", { "const": 18500 } ] }
           ]
         }
@@ -46,13 +57,35 @@
         }
       },
       {
+        "id": "slightly_overweight",
+        "text": "Slightly Overweight",
+        "color": "yellow",
+        "condition": {
+          "and": [
+            { "compare_int": [ { "u_val": "bmi_permil" }, ">", { "const": 25000 } ] },
+            { "compare_int": [ { "u_val": "bmi_permil" }, "<=", { "const": 26250 } ] }
+          ]
+        }
+      },
+      {
         "id": "overweight",
         "text": "Overweight",
         "color": "yellow",
         "condition": {
           "and": [
-            { "compare_int": [ { "u_val": "bmi_permil" }, ">", { "const": 25000 } ] },
+            { "compare_int": [ { "u_val": "bmi_permil" }, ">", { "const": 26250 } ] },
             { "compare_int": [ { "u_val": "bmi_permil" }, "<=", { "const": 30000 } ] }
+          ]
+        }
+      },
+      {
+        "id": "slightly_obese",
+        "text": "Obese",
+        "color": "light_red",
+        "condition": {
+          "and": [
+            { "compare_int": [ { "u_val": "bmi_permil" }, ">", { "const": 30000 } ] },
+            { "compare_int": [ { "u_val": "bmi_permil" }, "<=", { "const": 31250 } ] }
           ]
         }
       },
@@ -62,7 +95,7 @@
         "color": "light_red",
         "condition": {
           "and": [
-            { "compare_int": [ { "u_val": "bmi_permil" }, ">", { "const": 30000 } ] },
+            { "compare_int": [ { "u_val": "bmi_permil" }, ">", { "const": 31250 } ] },
             { "compare_int": [ { "u_val": "bmi_permil" }, "<=", { "const": 35000 } ] }
           ]
         }
